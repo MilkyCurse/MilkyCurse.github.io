@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "MyFont", sans-serif;
+            background: linear-gradient(180deg, #cfe6ff 0%, #eaf5ff 100%);
+            color: #111827;
+        }
+
+        .topbar {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            z-index: 10;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            background: rgba(255,255,255,0.7);
+            color: #111827;
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            border-radius: 999px;
+            padding: 12px 20px;
+            font-weight: 700;
+            box-shadow: 0 12px 24px rgba(17, 24, 39, 0.08);
+        }
+
+        .project-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 110px 24px 80px;
+        }
+
+        .project-card {
+            background: rgba(255,255,255,0.55);
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            border-radius: 28px;
+            padding: 40px 32px;
+            box-shadow: 0 20px 50px rgba(17, 24, 39, 0.06);
+        }
+
+        .project-kicker {
+            display: inline-block;
+            font-size: 0.9rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #3d5dff;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .project-title {
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -0.06em;
+            line-height: 0.95;
+            margin: 0 0 22px;
+        }
+
+        .project-text {
+            font-size: 1.12rem;
+            line-height: 1.9;
+            color: rgba(17, 24, 39, 0.8);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .project-text + .project-text {
+            margin-top: 18px;
+        }
+
+        .project-highlight {
+            display: inline-block;
+            margin-top: 24px;
+            background: rgba(61, 93, 255, 0.08);
+            color: #1c2e8a;
+            border: 1px solid rgba(61, 93, 255, 0.15);
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <a class="back-btn" href="index.html">Назад</a>
+    </div>
+
+    <main class="project-page">
+        <section class="project-card">
+            <div class="project-kicker">О проекте</div>
+            <h1 class="project-title">Проект о защите людей от мошенничества.</h1>
+
+            <p class="project-text">
+                Этот проект направлен на то, чтобы помочь людям лучше распознавать и избегать мошеннических схем в интернете.
+                Мы создаем простые и понятные инструменты, которые показывают, как распознать опасные ситуации, узнать признаки обмана и защитить свои данные.
+            </p>
+
+            <p class="project-text">
+                Проект является школьным проектом, цель которого — показать, как технологии и образование могут помогать людям быть более внимательными и безопасными в цифровом мире.
+            </p>
+
+            <div class="project-highlight">Школа Шувалова • Анти-Скам</div>
+        </section>
+    </main>
+</body>
+</html>
