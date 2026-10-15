@@ -173,6 +173,94 @@ body {
     opacity: 0.80;
 }
 
+@media (max-width: 760px) {
+    .header {
+        padding: 20px 16px 0;
+    }
+
+    .header-nav-list {
+        gap: 10px;
+    }
+
+    .header-nav-list a {
+        display: inline-block;
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 20px;
+        padding: 32px 20px 48px;
+    }
+
+    .hero-kicker {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        letter-spacing: 0.1em;
+        margin-bottom: 14px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 12vw, 4.5rem);
+        line-height: 0.98;
+        margin-bottom: 18px;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .hero-visual img {
+        width: 100%;
+        height: clamp(220px, 68vw, 360px);
+        border-radius: 22px;
+    }
+
+    .scam-definition {
+        gap: 12px;
+        margin-bottom: 48px;
+        padding-inline: 16px;
+    }
+
+    .scam-definition-inner {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .scam-definition .word,
+    .scam-definition .translation {
+        font-size: clamp(1.25rem, 6vw, 1.8rem);
+    }
+
+    .scam-definition .meaning {
+        font-size: 0.98rem;
+        line-height: 1.55;
+    }
+
+    .learn-more {
+        min-height: 40px;
+        padding: 10px 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .header-nav-list {
+        gap: 8px;
+    }
+
+    .header-nav-list a {
+        padding: 9px 10px;
+        font-size: 0.85rem;
+    }
+
+    .term-row {
+        gap: 7px;
+    }
+}
+
 @font-face {
     font-family: "MyFont";
     src: url("fonts/FinlandicaHeadline-VariableFont_wght.ttf") format("truetype");
