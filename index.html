@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
     <main class="hero">
         <div class="hero-content">
             <p class="hero-kicker">Безопасность в цифровом мире</p>
-            <h1>Защити себя от мошенников.</h1>
+            <h1>Защитись от мошенников.</h1>
             <p class="hero-text">
                 Наша платформа помогает быстро распознавать подозрительные схемы,
                 проверять риски и сохранять спокойствие в онлайн-среде.
@@ -75,5 +75,72 @@
             </div>
         </div>
     </section>
+
+    <section class="safety-carousel" aria-labelledby="safety-title">
+        <div class="safety-heading">
+            <p class="safety-kicker">Практические советы</p>
+            <h2 id="safety-title">Как заметить мошенничество</h2>
+        </div>
+
+        <div class="carousel" aria-roledescription="карусель" aria-label="Советы по безопасности">
+            <button class="carousel-arrow" type="button" data-direction="previous" aria-label="Предыдущий совет">
+                <span aria-hidden="true">←</span>
+            </button>
+
+            <div class="carousel-viewport" tabindex="0">
+                <article class="carousel-card" aria-roledescription="слайд" aria-label="Совет 1 из 5">
+                    <p class="card-category">01 / Срочность</p>
+                    <h3>Тебя торопят принять решение?</h3>
+                    <p class="card-copy">Мошенники часто пугают блокировкой счёта или говорят, что предложение исчезнет через несколько минут.</p>
+                    <p class="card-action"><strong>Что делать:</strong> остановись и свяжись с организацией по официальному номеру.</p>
+                </article>
+
+                <article class="carousel-card" aria-roledescription="слайд" aria-label="Совет 2 из 5" hidden>
+                    <p class="card-category">02 / Ссылки</p>
+                    <h3>Проверь адрес сайта перед входом</h3>
+                    <p class="card-copy">Фишинговая ссылка может вести на копию знакомого сайта с похожим названием или лишними символами в адресе.</p>
+                    <p class="card-action"><strong>Что делать:</strong> открой приложение или введи официальный адрес самостоятельно.</p>
+                </article>
+
+                <article class="carousel-card" aria-roledescription="слайд" aria-label="Совет 3 из 5" hidden>
+                    <p class="card-category">03 / Коды и пароли</p>
+                    <h3>Никому не сообщай код подтверждения</h3>
+                    <p class="card-copy">Настоящие сотрудники банка и служб поддержки не просят присылать пароль, PIN-код или одноразовый код из SMS.</p>
+                    <p class="card-action"><strong>Что делать:</strong> не называй код даже тому, кто представляется сотрудником.</p>
+                </article>
+
+                <article class="carousel-card" aria-roledescription="слайд" aria-label="Совет 4 из 5" hidden>
+                    <p class="card-category">04 / Слишком выгодно</p>
+                    <h3>Обещают лёгкий выигрыш или доход?</h3>
+                    <p class="card-copy">Гарантированная прибыль, неожиданный приз или просьба оплатить комиссию заранее могут быть приманкой.</p>
+                    <p class="card-action"><strong>Что делать:</strong> проверь предложение независимо и не отправляй деньги за «получение» выигрыша.</p>
+                </article>
+
+                <article class="carousel-card" aria-roledescription="слайд" aria-label="Совет 5 из 5" hidden>
+                    <p class="card-category">05 / Переводы</p>
+                    <h3>Просят принять и переслать деньги?</h3>
+                    <p class="card-copy">Так могут втянуть в незаконную схему, используя твой счёт для перевода чужих средств.</p>
+                    <p class="card-action"><strong>Что делать:</strong> не переводи деньги незнакомцам и обсуди подозрительную просьбу с доверенным взрослым или банком.</p>
+                </article>
+            </div>
+
+            <button class="carousel-arrow" type="button" data-direction="next" aria-label="Следующий совет">
+                <span aria-hidden="true">→</span>
+            </button>
+        </div>
+
+        <div class="carousel-footer">
+            <div class="carousel-dots" role="group" aria-label="Выбрать совет">
+                <button class="carousel-dot is-active" type="button" aria-label="Перейти к совету 1" aria-pressed="true"></button>
+                <button class="carousel-dot" type="button" aria-label="Перейти к совету 2" aria-pressed="false"></button>
+                <button class="carousel-dot" type="button" aria-label="Перейти к совету 3" aria-pressed="false"></button>
+                <button class="carousel-dot" type="button" aria-label="Перейти к совету 4" aria-pressed="false"></button>
+                <button class="carousel-dot" type="button" aria-label="Перейти к совету 5" aria-pressed="false"></button>
+            </div>
+            <p class="carousel-status" aria-live="polite">Совет 1 из 5</p>
+        </div>
+    </section>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
