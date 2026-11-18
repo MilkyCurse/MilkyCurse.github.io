@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
+    <title>О нас — AntiScam</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
     <style>
@@ -11,15 +11,17 @@
             margin: 0;
             min-height: 100vh;
             font-family: "MyFont", sans-serif;
-            background: linear-gradient(180deg, #cfe6ff 0%, #eaf5ff 100%);
+            background: #f7fbff;
             color: #111827;
         }
 
         .topbar {
-            position: absolute;
-            top: 24px;
-            left: 24px;
+            position: sticky;
+            top: 0;
             z-index: 10;
+            padding: 12px 24px;
+            border-bottom: 1px solid #cbd9e6;
+            background: rgba(255, 255, 255, 0.97);
         }
 
         .back-btn {
@@ -27,19 +29,18 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            background: rgba(255,255,255,0.7);
+            background: #ffffff;
             color: #111827;
-            border: 1px solid rgba(17, 24, 39, 0.08);
-            border-radius: 999px;
-            padding: 12px 20px;
+            border: 1px solid #cbd9e6;
+            border-radius: 6px;
+            padding: 10px 16px;
             font-weight: 700;
-            box-shadow: 0 12px 24px rgba(17, 24, 39, 0.08);
         }
 
         .about-page {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 100px 24px 80px;
+            padding: 56px 24px 80px;
         }
 
         .about-header {
@@ -52,7 +53,7 @@
             font-size: 0.9rem;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: #3d5dff;
+            color: #1769c2;
             font-weight: 700;
             margin-bottom: 16px;
         }
@@ -60,7 +61,7 @@
         .about-title {
             font-size: clamp(2.5rem, 5vw, 5rem);
             font-weight: 800;
-            letter-spacing: -0.06em;
+            letter-spacing: 0;
             line-height: 0.95;
             margin: 0;
         }
@@ -72,11 +73,10 @@
 
         .person-card {
             display: block;
-            background: rgba(255,255,255,0.5);
-            border: 1px solid rgba(17, 24, 39, 0.08);
-            border-radius: 24px;
+            background: #ffffff;
+            border: 1px solid #cbd9e6;
+            border-radius: 6px;
             padding: 28px;
-            box-shadow: 0 18px 40px rgba(17, 24, 39, 0.06);
         }
 
         .person-info {
@@ -88,7 +88,7 @@
         .person-name {
             font-size: clamp(2rem, 3vw, 3rem);
             font-weight: 800;
-            letter-spacing: -0.05em;
+            letter-spacing: 0;
             margin-bottom: 10px;
         }
 
@@ -96,7 +96,7 @@
             font-size: 1rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: #3d5dff;
+            color: #1769c2;
             font-weight: 700;
             margin-bottom: 18px;
         }
@@ -117,12 +117,11 @@
 
         @media (max-width: 480px) {
             .topbar {
-                top: 16px;
-                left: 16px;
+                padding-inline: 16px;
             }
 
             .about-page {
-                padding: 88px 16px 48px;
+                padding: 36px 16px 48px;
             }
 
             .about-header {
@@ -155,10 +154,20 @@
         }
     </style>
 </head>
-<body>
-    <div class="topbar">
-        <a class="back-btn" href="index.html">Назад</a>
-    </div>
+<body class="home-page">
+    <header class="site-header">
+        <a class="brand" href="index.html#intro" aria-label="AntiScam — на главную">
+            <span class="brand-mark" aria-hidden="true">A</span>
+            <span>AntiScam</span>
+        </a>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <a href="practice.html">Практика</a>
+            <a href="handbook.html">Справочник</a>
+            <a href="help.html">Нужна помощь</a>
+            <a href="about.html" aria-current="page">О нас</a>
+            <a href="project.html">О проекте</a>
+        </nav>
+    </header>
 
     <main class="about-page">
         <header class="about-header">
@@ -181,7 +190,7 @@
 
             <article class="person-card">
                 <div class="person-info">
-                    <div class="person-name">Роман Алишерович</div>
+                    <div class="person-name">Роман Альшерович</div>
                     <div class="person-role">Учитель, поддерживающий проект</div>
                     <p class="person-text">
                         Роман является учителем, который поддерживает проект и помогает направлять его развитие. Он помогает обоснованно формулировать идеи, следить за качеством работы и создавать условия для успешной реализации проекта.
@@ -191,5 +200,6 @@
             </article>
         </section>
     </main>
+    <script src="script.js" defer></script>
 </body>
 </html>

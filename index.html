@@ -3,143 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AntiScam</title>
+    <meta name="theme-color" content="#ffffff">
+    <title>AntiScam — безопаснее в сети</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
 </head>
-<body>
-    <header class="header">
-        <div class="header-container">
-            <nav class="header-nav">
-                <ul class="header-nav-list">
-                    <li><a href="index.html">Домой</a></li>
-                    <li><a href="about.html">Про нас</a></li>
-                    <li><a href="project.html">Про проект</a></li>
-                </ul>
-            </nav>
-        </div>
+<body class="home-page">
+    <header class="site-header">
+        <a class="brand" href="#intro" aria-label="AntiScam — в начало">
+            <span class="brand-mark" aria-hidden="true">A</span>
+            <span>AntiScam</span>
+        </a>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <a href="practice.html">Практика</a>
+            <a href="handbook.html">Справочник</a>
+            <a href="help.html">Нужна помощь</a>
+            <a href="about.html">О нас</a>
+            <a href="project.html">О проекте</a>
+        </nav>
     </header>
 
-    <main class="hero">
-        <div class="hero-content">
-            <p class="hero-kicker">Безопасность в цифровом мире</p>
-            <h1>Защитись от мошенников.</h1>
-            <p class="hero-text">
-                Наша платформа помогает быстро распознавать подозрительные схемы,
-                проверять риски и сохранять спокойствие в онлайн-среде.
-            </p>
-        </div>
+    <main class="page-content">
+        <section class="page-section intro-section" id="intro" aria-labelledby="intro-title">
+            <p class="section-index">01 / Введение</p>
+            <div class="intro-brand" aria-label="Логотип AntiScam">
+                <span class="intro-mark" aria-hidden="true">A</span>
+                <span>AntiScam</span>
+            </div>
+            <h1 id="intro-title">Замечай обман.<br>Сохраняй контроль.</h1>
+            <p class="section-lead">Короткий интерактивный гид о том, как распознавать мошеннические сообщения, защищать свои данные и не принимать решения под давлением.</p>
+            <a class="button button-primary" href="#quick-check">Начать проверку <span aria-hidden="true">↓</span></a>
+        </section>
 
-        <div class="hero-visual">
-            <img
-                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80"
-                alt="Secure digital protection"
-            >
-        </div>
+        <section class="page-section quick-check-section" id="quick-check" aria-labelledby="quick-check-title">
+            <p class="section-index">02 / Быстрая проверка</p>
+            <h2 id="quick-check-title">Что бы ты сделал?</h2>
+            <p class="section-intro">Пять коротких ситуаций помогут проверить первые реакции. Ответы и объяснения появятся после теста.</p>
+            <div class="quiz-panel" id="quick-quiz" data-quiz-run="intro" data-feedback-mode="after">
+                <div class="quiz-form" id="quick-form">
+                    <p class="quiz-count" id="quick-count">Вопрос 1 из 5</p>
+                    <h3 class="quiz-question" id="quick-question"></h3>
+                    <div class="quiz-options" id="quick-options"></div>
+                    <p class="quiz-feedback" id="quick-feedback" role="status" aria-live="polite"></p>
+                    <div class="quiz-controls">
+                        <button class="button button-primary" id="quick-next" type="button" hidden>Дальше</button>
+                        <button class="button button-quiet" id="quick-open-result" type="button" hidden>Показать результат</button>
+                    </div>
+                </div>
+                <section class="quiz-review" id="quick-review" aria-label="Разбор ответов" hidden>
+                    <h3 class="quiz-review-heading">Разбор ответов</h3>
+                    <div class="review-navigation" id="review-nav" role="group" aria-label="Выбрать вопрос"></div>
+                    <h3 class="review-question-title" id="review-question-title"></h3>
+                    <div class="review-options" id="review-options"></div>
+                    <p class="review-explanation" id="review-explanation"></p>
+                    <button class="button button-quiet" id="close-review" type="button">Вернуться к результату</button>
+                </section>
+                <dialog class="quiz-result-dialog" id="quick-result" aria-labelledby="result-title">
+                    <button class="result-close" type="button" aria-label="Закрыть результат">×</button>
+                    <div class="quiz-result" id="result-card">
+                        <span class="result-icon" id="result-icon" aria-hidden="true"></span>
+                        <div class="result-copy">
+                            <h3 id="result-title"></h3>
+                            <p id="result-message"></p>
+                            <p class="result-score" id="result-score"></p>
+                        </div>
+                        <div class="result-actions">
+                            <button class="button button-primary" id="show-answers" type="button">Показать ответы</button>
+                            <button class="button button-quiet" id="retry-quiz" type="button">Пройти ещё раз</button>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </section>
+
+        <section class="page-section rule-section" id="rule" aria-labelledby="rule-title">
+            <p class="section-index">03 / Главное правило</p>
+            <p class="rule-eyebrow">Если тебя торопят — это повод остановиться</p>
+            <h2 id="rule-title">Не спеши.</h2>
+            <p>Положи трубку. Не нажимай на ссылку. Не отправляй деньги и коды. Найди официальный номер или сайт самостоятельно и проверь информацию.</p>
+        </section>
+
+        <section class="page-section schemes-section" id="schemes" aria-labelledby="schemes-title">
+            <p class="section-index">04 / Знакомые схемы</p>
+            <h2 id="schemes-title">Узнавай знакомые уловки</h2>
+            <p class="section-intro">Нажми «Подробнее», чтобы прочитать, как работает каждая схема и что делать.</p>
+            <div class="scheme-grid">
+                <article class="scheme-card">
+                    <p class="scheme-number">01</p>
+                    <h3>Фишинг</h3>
+                    <p>Поддельное сообщение или сайт выманивает пароль, код или данные карты.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>Мошенник выдаёт себя за известную компанию и ведёт на поддельную страницу входа.</p>
+                            <p><strong>Как защититься:</strong> не открывай неожиданные ссылки; зайди в сервис через официальное приложение и проверь адрес сайта.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="scheme-card">
+                    <p class="scheme-number">02</p>
+                    <h3>Звонок «из банка»</h3>
+                    <p>Звонивший пугает подозрительной операцией и просит срочно назвать код или перевести деньги.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>Злоумышленник может представиться сотрудником банка и убеждать тебя сообщить код, установить приложение или перевести деньги.</p>
+                            <p><strong>Как защититься:</strong> заверши звонок и сам позвони в банк по официальному номеру. Не сообщай коды и пароли.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="scheme-card">
+                    <p class="scheme-number">03</p>
+                    <h3>Лёгкий заработок</h3>
+                    <p>Обещают большую прибыль без риска, но просят сначала внести деньги или привести знакомых.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>После первого взноса могут требовать новые платежи, а обещанный заработок или вывод денег так и не появится.</p>
+                            <p><strong>Как защититься:</strong> проверяй компанию независимо и не плати за обещанную работу или гарантированную прибыль.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="scheme-card">
+                    <p class="scheme-number">04</p>
+                    <h3>Посылка и небольшая доплата</h3>
+                    <p>Сообщают о доставке и просят оплатить маленький сбор по ссылке.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>Ссылка может вести на поддельную страницу оплаты и сбора данных карты.</p>
+                            <p><strong>Как защититься:</strong> проверь статус доставки в официальном приложении или на сайте службы, введя адрес самостоятельно.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="scheme-card">
+                    <p class="scheme-number">05</p>
+                    <h3>«Техподдержка» с неожиданным звонком</h3>
+                    <p>Незнакомец говорит, что устройство заражено, и просит установить программу или дать удалённый доступ.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>Получив доступ к устройству, злоумышленник может увидеть личные данные или управлять приложениями.</p>
+                            <p><strong>Как защититься:</strong> не устанавливай программы по просьбе незнакомца; найди контакты поддержки на официальном сайте.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="scheme-card">
+                    <p class="scheme-number">06</p>
+                    <h3>Поддельный интернет-магазин</h3>
+                    <p>Сайт предлагает популярный товар по невероятно низкой цене и требует полную предоплату.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>После оплаты продавец может исчезнуть или прислать подделку. Отзывы на самом сайте могут быть ненастоящими.</p>
+                            <p><strong>Как защититься:</strong> проверь продавца в независимых источниках, условия возврата и безопасный способ оплаты.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="scheme-card">
+                    <p class="scheme-number">07</p>
+                    <h3>Фальшивая оплата на площадке</h3>
+                    <p>Покупатель или продавец присылает ссылку, чтобы «получить деньги» или подтвердить доставку.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>Поддельная страница может выглядеть как сайт торговой площадки или банка и просить данные карты и код.</p>
+                            <p><strong>Как защититься:</strong> веди переписку и оплату только внутри официального приложения площадки.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="scheme-card">
+                    <p class="scheme-number">08</p>
+                    <h3>Просьба о деньгах от нового знакомого</h3>
+                    <p>Человек быстро завоёвывает доверие, а затем рассказывает о срочной проблеме и просит перевод.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>История может сопровождаться просьбой хранить всё в секрете или обещанием скоро вернуть деньги.</p>
+                            <p><strong>Как защититься:</strong> не отправляй деньги человеку, которого знаешь только онлайн; проверь его историю другим способом и посоветуйся с близкими.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="scheme-card">
+                    <p class="scheme-number">09</p>
+                    <h3>Ложный штраф или выплата</h3>
+                    <p>Сообщение от имени ведомства требует срочно оплатить штраф или перейти за выплатой.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>В сообщении могут использовать официальные слова и логотипы, но вести на поддельный сайт.</p>
+                            <p><strong>Как защититься:</strong> проверь уведомление в официальном личном кабинете или позвони по номеру с государственного сайта.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="scheme-card">
+                    <p class="scheme-number">10</p>
+                    <h3>Неожиданный QR-код</h3>
+                    <p>QR-код в сообщении или на наклейке ведёт на неизвестную страницу оплаты или входа.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>Код скрывает адрес ссылки, поэтому до перехода сложнее понять, куда именно он ведёт.</p>
+                            <p><strong>Как защититься:</strong> не вводи пароли и платёжные данные на странице, открытой из неожиданного QR-кода; проверь её адрес.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="scheme-card">
+                    <p class="scheme-number">11</p>
+                    <h3>Подработка с оплатой за доступ</h3>
+                    <p>Для начала работы просят купить обучение, внести залог или оплатить доступ к заданиям.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>«Задания» могут обещать быстрый доход за лайки или простые действия, а затем требовать всё новые взносы.</p>
+                            <p><strong>Как защититься:</strong> проверяй работодателя и не плати, чтобы получить работу или зарплату.</p>
+                        </div>
+                    </details>
+                </article>
+                <article class="scheme-card">
+                    <p class="scheme-number">12</p>
+                    <h3>Перевод через твой счёт</h3>
+                    <p>Знакомый или незнакомец просит получить деньги и переслать их дальше за вознаграждение.</p>
+                    <details class="scheme-details">
+                        <summary class="text-button">Подробнее <span aria-hidden="true">+</span></summary>
+                        <div class="details-body">
+                            <p>Так можно невольно стать посредником в незаконном переводе и столкнуться с серьёзными последствиями.</p>
+                            <p><strong>Как защититься:</strong> не принимай и не пересылай чужие деньги; обратись в банк и расскажи взрослому, которому доверяешь.</p>
+                        </div>
+                    </details>
+                </article>
+            </div>
+        </section>
+
+        <section class="page-section spot-section" id="spot" aria-labelledby="spot-title">
+            <p class="section-index">05 / Найди подозрительное</p>
+            <h2 id="spot-title">Что не так в этом сообщении?</h2>
+            <p class="section-intro">Это учебный макет сообщения, а не настоящий скриншот. Отметь все признаки обмана, затем проверь себя.</p>
+            <div class="message-example" aria-label="Учебный пример подозрительного сообщения">
+                <div class="message-topline"><span>ПРИМЕР СООБЩЕНИЯ</span><span>НЕ НАСТОЯЩИЙ БАНК</span></div>
+                <p class="message-sender">Отправитель: <button class="message-clue" type="button" data-clue="sender" aria-pressed="false">Банк Онлайн</button></p>
+                <p class="message-body">Замечена подозрительная операция. <button class="message-clue" type="button" data-clue="rush" aria-pressed="false">Счёт будет заблокирован через 10 минут</button>.</p>
+                <p class="message-body">Чтобы отменить блокировку, открой: <button class="message-clue" type="button" data-clue="link" aria-pressed="false">bank-secure-check.example</button></p>
+                <p class="message-body">Затем <button class="message-clue" type="button" data-clue="code" aria-pressed="false">отправь код подтверждения оператору</button>.</p>
+            </div>
+            <div class="spot-controls">
+                <button class="button button-primary" id="check-clues" type="button">Проверить находки</button>
+                <button class="button button-quiet" id="reset-clues" type="button">Начать заново</button>
+            </div>
+            <p class="spot-feedback" id="spot-feedback" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="page-section psychology-section" id="psychology" aria-labelledby="psychology-title">
+            <p class="section-index">06 / Психология обмана</p>
+            <h2 id="psychology-title">Мошенники играют на чувствах</h2>
+            <p class="section-intro">Сильная эмоция мешает спокойно оценить просьбу. Заметь её — и верни себе время на проверку.</p>
+            <div class="psychology-list">
+                <article class="psychology-item">
+                    <span class="psychology-tag">Страх</span>
+                    <p>«Сейчас заблокируем счёт». Цель — заставить действовать, не задавая вопросов.</p>
+                </article>
+                <article class="psychology-item">
+                    <span class="psychology-tag">Жадность и надежда</span>
+                    <p>«Ты выиграл» или «доход гарантирован». Цель — отвлечь обещанием лёгкой выгоды.</p>
+                </article>
+                <article class="psychology-item">
+                    <span class="psychology-tag">Доверие к авторитету</span>
+                    <p>«Я сотрудник банка или полиции». Цель — получить доверие благодаря знакомому статусу.</p>
+                </article>
+                <article class="psychology-item">
+                    <span class="psychology-tag">Секретность</span>
+                    <p>«Никому не говори». Цель — не дать тебе свериться с близкими или настоящей службой.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="page-section rehearsal-section" id="practice" aria-labelledby="practice-title">
+            <p class="section-index">07 / Репетиция без риска</p>
+            <h2 id="practice-title">Потренируй безопасный ответ</h2>
+            <div class="rehearsal-panel">
+                <p class="scenario-label">СИТУАЦИЯ</p>
+                <p class="scenario-text">В сообщении от незнакомого номера пишут: «Я случайно отправил тебе код. Пришли его обратно, пожалуйста».</p>
+                <p class="scenario-question">Как поступишь?</p>
+                <div class="rehearsal-options">
+                    <button class="choice-button" type="button" data-final-choice="send">Отправлю код, чтобы помочь</button>
+                    <button class="choice-button" type="button" data-final-choice="ignore">Не отвечу, заблокирую номер и проверю аккаунт через официальное приложение</button>
+                    <button class="choice-button" type="button" data-final-choice="ask">Спрошу отправителя, что случилось, и пришлю код после ответа</button>
+                </div>
+                <p class="rehearsal-feedback" id="rehearsal-feedback" role="status" aria-live="polite"></p>
+                <button class="button button-quiet" id="rehearsal-reset" type="button" hidden>Попробовать ещё раз</button>
+            </div>
+        </section>
     </main>
 
-    <section class="scam-definition">
-        <div class="scam-definition-inner">
-            <div class="definition-block">
-                <div class="term-row">
-                    <span class="word">SCAM</span>
-                    <span class="divider">/</span>
-                    <span class="translation">Мошенничество</span>
-                </div>
-                <p class="meaning">Когда злоумышленники выдают ложные обещания, чтобы обмануть людей и получить деньги или данные.</p>
-                <a class="learn-more" href="https://ru.wikipedia.org/wiki/Мошенничество" target="_blank" rel="noopener noreferrer">узнать больше</a>
-            </div>
-        </div>
-
-        <div class="scam-definition-inner">
-            <div class="definition-block">
-                <div class="term-row">
-                    <span class="word">PHISHING</span>
-                    <span class="divider">/</span>
-                    <span class="translation">Поддельный запрос</span>
-                </div>
-                <p class="meaning">Поддельные сообщения или сайты, которые притворяются надежными сервисами, чтобы выманить логины, пароли или деньги.</p>
-                <a class="learn-more" href="https://ru.wikipedia.org/wiki/Фишинг" target="_blank" rel="noopener noreferrer">узнать больше</a>
-            </div>
-        </div>
-
-        <div class="scam-definition-inner">
-            <div class="definition-block">
-                <div class="term-row">
-                    <span class="word">FRAUD</span>
-                    <span class="divider">/</span>
-                    <span class="translation">Обман</span>
-                </div>
-                <p class="meaning">Хитрое обманное действие, направленное на получение выгоды за счет чужого доверия или ошибок.</p>
-                <a class="learn-more" href="https://ru.wikipedia.org/wiki/Мошенничество" target="_blank" rel="noopener noreferrer">узнать больше</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="safety-carousel" aria-labelledby="safety-title">
-        <div class="safety-heading">
-            <p class="safety-kicker">Практические советы</p>
-            <h2 id="safety-title">Как заметить мошенничество</h2>
-        </div>
-
-        <div class="carousel" aria-roledescription="карусель" aria-label="Советы по безопасности">
-            <button class="carousel-arrow" type="button" data-direction="previous" aria-label="Предыдущий совет">
-                <span aria-hidden="true">←</span>
-            </button>
-
-            <div class="carousel-viewport" tabindex="0">
-                <article class="carousel-card" aria-roledescription="слайд" aria-label="Совет 1 из 5">
-                    <p class="card-category">01 / Срочность</p>
-                    <h3>Тебя торопят принять решение?</h3>
-                    <p class="card-copy">Мошенники часто пугают блокировкой счёта или говорят, что предложение исчезнет через несколько минут.</p>
-                    <p class="card-action"><strong>Что делать:</strong> остановись и свяжись с организацией по официальному номеру.</p>
-                </article>
-
-                <article class="carousel-card" aria-roledescription="слайд" aria-label="Совет 2 из 5" hidden>
-                    <p class="card-category">02 / Ссылки</p>
-                    <h3>Проверь адрес сайта перед входом</h3>
-                    <p class="card-copy">Фишинговая ссылка может вести на копию знакомого сайта с похожим названием или лишними символами в адресе.</p>
-                    <p class="card-action"><strong>Что делать:</strong> открой приложение или введи официальный адрес самостоятельно.</p>
-                </article>
-
-                <article class="carousel-card" aria-roledescription="слайд" aria-label="Совет 3 из 5" hidden>
-                    <p class="card-category">03 / Коды и пароли</p>
-                    <h3>Никому не сообщай код подтверждения</h3>
-                    <p class="card-copy">Настоящие сотрудники банка и служб поддержки не просят присылать пароль, PIN-код или одноразовый код из SMS.</p>
-                    <p class="card-action"><strong>Что делать:</strong> не называй код даже тому, кто представляется сотрудником.</p>
-                </article>
-
-                <article class="carousel-card" aria-roledescription="слайд" aria-label="Совет 4 из 5" hidden>
-                    <p class="card-category">04 / Слишком выгодно</p>
-                    <h3>Обещают лёгкий выигрыш или доход?</h3>
-                    <p class="card-copy">Гарантированная прибыль, неожиданный приз или просьба оплатить комиссию заранее могут быть приманкой.</p>
-                    <p class="card-action"><strong>Что делать:</strong> проверь предложение независимо и не отправляй деньги за «получение» выигрыша.</p>
-                </article>
-
-                <article class="carousel-card" aria-roledescription="слайд" aria-label="Совет 5 из 5" hidden>
-                    <p class="card-category">05 / Переводы</p>
-                    <h3>Просят принять и переслать деньги?</h3>
-                    <p class="card-copy">Так могут втянуть в незаконную схему, используя твой счёт для перевода чужих средств.</p>
-                    <p class="card-action"><strong>Что делать:</strong> не переводи деньги незнакомцам и обсуди подозрительную просьбу с доверенным взрослым или банком.</p>
-                </article>
-            </div>
-
-            <button class="carousel-arrow" type="button" data-direction="next" aria-label="Следующий совет">
-                <span aria-hidden="true">→</span>
-            </button>
-        </div>
-
-        <div class="carousel-footer">
-            <div class="carousel-dots" role="group" aria-label="Выбрать совет">
-                <button class="carousel-dot is-active" type="button" aria-label="Перейти к совету 1" aria-pressed="true"></button>
-                <button class="carousel-dot" type="button" aria-label="Перейти к совету 2" aria-pressed="false"></button>
-                <button class="carousel-dot" type="button" aria-label="Перейти к совету 3" aria-pressed="false"></button>
-                <button class="carousel-dot" type="button" aria-label="Перейти к совету 4" aria-pressed="false"></button>
-                <button class="carousel-dot" type="button" aria-label="Перейти к совету 5" aria-pressed="false"></button>
-            </div>
-            <p class="carousel-status" aria-live="polite">Совет 1 из 5</p>
-        </div>
-    </section>
+    <footer class="site-footer">
+        <a class="footer-brand" href="#intro">AntiScam</a>
+        <p>Учебный проект о цифровой безопасности</p>
+        <nav class="footer-nav" aria-label="Разделы сайта">
+            <a href="#intro">01 Введение</a>
+            <a href="#quick-check">02 Быстрая проверка</a>
+            <a href="#rule">03 Главное правило</a>
+            <a href="#schemes">04 Знакомые схемы</a>
+            <a href="#spot">05 Найди подозрительное</a>
+            <a href="#psychology">06 Психология обмана</a>
+            <a href="#practice">07 Репетиция без риска</a>
+        </nav>
+    </footer>
 
     <script src="script.js" defer></script>
 </body>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Практика — AntiScam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+</head>
+<body class="home-page">
+    <header class="site-header">
+        <a class="brand" href="index.html#intro" aria-label="AntiScam — на главную">
+            <span class="brand-mark" aria-hidden="true">A</span>
+            <span>AntiScam</span>
+        </a>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <a href="practice.html" aria-current="page">Практика</a>
+            <a href="handbook.html">Справочник</a>
+            <a href="help.html">Нужна помощь</a>
+            <a href="about.html">О нас</a>
+            <a href="project.html">О проекте</a>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="page-section intro-section tool-intro" aria-labelledby="practice-title">
+            <p class="section-index">Тренировка без риска</p>
+            <h1 id="practice-title">Практика</h1>
+            <p class="section-lead">Десять ситуаций. После каждого выбора сразу увидишь, верный ли ответ, и почему.</p>
+        </section>
+
+        <section class="page-section quick-check-section" id="quick-check" aria-labelledby="quick-check-title">
+            <p class="section-index">Тренировка 01</p>
+            <h2 id="quick-check-title">Что бы ты сделал?</h2>
+            <p class="section-intro">После каждого ответа сразу появится правильный вариант и объяснение.</p>
+            <div class="quiz-panel" id="quick-quiz" data-quiz-run="practice" data-feedback-mode="immediate">
+                <div class="quiz-form" id="quick-form">
+                    <p class="quiz-count" id="quick-count">Вопрос 1 из 10</p>
+                    <h3 class="quiz-question" id="quick-question"></h3>
+                    <div class="quiz-options" id="quick-options"></div>
+                    <p class="quiz-feedback" id="quick-feedback" role="status" aria-live="polite"></p>
+                    <div class="quiz-controls">
+                        <button class="button button-primary" id="quick-next" type="button" hidden>Дальше</button>
+                        <button class="button button-quiet" id="quick-open-result" type="button" hidden>Показать результат</button>
+                    </div>
+                </div>
+                <section class="quiz-review" id="quick-review" aria-label="Разбор ответов" hidden>
+                    <h3 class="quiz-review-heading">Разбор ответов</h3>
+                    <div class="review-navigation" id="review-nav" role="group" aria-label="Выбрать вопрос"></div>
+                    <h3 class="review-question-title" id="review-question-title"></h3>
+                    <div class="review-options" id="review-options"></div>
+                    <p class="review-explanation" id="review-explanation"></p>
+                    <button class="button button-quiet" id="close-review" type="button">Вернуться к результату</button>
+                </section>
+                <dialog class="quiz-result-dialog" id="quick-result" aria-labelledby="result-title">
+                    <button class="result-close" type="button" aria-label="Закрыть результат">×</button>
+                    <div class="quiz-result" id="result-card">
+                        <span class="result-icon" id="result-icon" aria-hidden="true"></span>
+                        <div class="result-copy">
+                            <h3 id="result-title"></h3>
+                            <p id="result-message"></p>
+                            <p class="result-score" id="result-score"></p>
+                        </div>
+                        <div class="result-actions">
+                            <button class="button button-primary" id="show-answers" type="button">Показать ответы</button>
+                            <button class="button button-quiet" id="retry-quiz" type="button">Пройти ещё раз</button>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="footer-brand" href="index.html#intro">AntiScam</a>
+        <a class="button button-quiet" href="index.html">На главную</a>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
